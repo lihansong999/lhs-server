@@ -1,0 +1,5 @@
+/*
+重新创建数据库
+*/
+DROP DATABASE IF EXISTS lhs_db;
+CREATE DATABASE IF NOT EXISTS lhs_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC1C97B1-3EC0-4FBA-A211-369893F88BF4}</ProjectGuid>
+    <RootNamespace>BlackBoxTest</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;TINYXML2_IMPORT;USE_MEMORY_LEAK_DETECTOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\libprotobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\bin\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\zlib\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libcurl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\openssl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libssh2\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ProtobufDynamic\ProtoExamples" "$(SolutionDir)$(Platform)\$(Configuration)\ProtoExamples\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;TINYXML2_IMPORT;USE_MEMORY_LEAK_DETECTOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\libprotobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\bin\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\zlib\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libcurl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\openssl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libssh2\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ProtobufDynamic\ProtoExamples" "$(SolutionDir)$(Platform)\$(Configuration)\ProtoExamples\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TINYXML2_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\libprotobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\bin\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\zlib\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libcurl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\openssl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libssh2\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ProtobufDynamic\ProtoExamples" "$(SolutionDir)$(Platform)\$(Configuration)\ProtoExamples\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;TINYXML2_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\libprotobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\bin\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\MemoryLeakDetector\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\zlib\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libcurl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\openssl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)..\ThirdParty\libssh2\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ProtobufDynamic\ProtoExamples" "$(SolutionDir)$(Platform)\$(Configuration)\ProtoExamples\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccountInputDlg.h" />
+    <ClInclude Include="BlackBoxTest.h" />
+    <ClInclude Include="BlackBoxTestDlg.h" />
+    <ClInclude Include="Classes\Base64.h" />
+    <ClInclude Include="Classes\BSDTcpSocket.h" />
+    <ClInclude Include="Classes\Charset.h" />
+    <ClInclude Include="Classes\Data.h" />
+    <ClInclude Include="Classes\HttpRequest.h" />
+    <ClInclude Include="Classes\Local.h" />
+    <ClInclude Include="Classes\RecordInfo.h" />
+    <ClInclude Include="Classes\SocketThread.h" />
+    <ClInclude Include="Classes\Tools.h" />
+    <ClInclude Include="Classes\TypeDefine.h" />
+    <ClInclude Include="Classes\WebMsgProtocol\WebMsgBase.h" />
+    <ClInclude Include="Classes\WebMsgProtocol\WebMsgPackage.h" />
+    <ClInclude Include="Classes\WebMsgProtocol\WebMsgProtocol.h" />
+    <ClInclude Include="CommonInputDlg.h" />
+    <ClInclude Include="PlayerInfoDlg.h" />
+    <ClInclude Include="ProtobufDynamic\CustomImporter.h" />
+    <ClInclude Include="ProtobufDynamic\CustomMultiFileErrorCollector.h" />
+    <ClInclude Include="ProtobufDynamic\CustomSourceTree.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AccountInputDlg.cpp" />
+    <ClCompile Include="BlackBoxTest.cpp" />
+    <ClCompile Include="BlackBoxTestDlg.cpp" />
+    <ClCompile Include="Classes\Base64.cpp" />
+    <ClCompile Include="Classes\BSDTcpSocket.cpp" />
+    <ClCompile Include="Classes\Charset.cpp" />
+    <ClCompile Include="Classes\Data.cpp" />
+    <ClCompile Include="Classes\HttpRequest.cpp" />
+    <ClCompile Include="Classes\Local.cpp" />
+    <ClCompile Include="Classes\RecordInfo.cpp" />
+    <ClCompile Include="Classes\SocketThread.cpp" />
+    <ClCompile Include="Classes\Tools.cpp" />
+    <ClCompile Include="Classes\TypeDefine.cpp" />
+    <ClCompile Include="Classes\WebMsgProtocol\WebMsgBase.cpp" />
+    <ClCompile Include="Classes\WebMsgProtocol\WebMsgPackage.cpp" />
+    <ClCompile Include="Classes\WebMsgProtocol\WebMsgProtocol.cpp" />
+    <ClCompile Include="CommonInputDlg.cpp" />
+    <ClCompile Include="PlayerInfoDlg.cpp" />
+    <ClCompile Include="ProtobufDynamic\CustomImporter.cpp" />
+    <ClCompile Include="ProtobufDynamic\CustomMultiFileErrorCollector.cpp" />
+    <ClCompile Include="ProtobufDynamic\CustomSourceTree.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BlackBoxTest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\BlackBoxTest.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BlackBoxTest.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BlackBoxTest.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,9 @@
+1.配置启动MySQL
+2.以名称顺序执行Initialize中的SQL文件（首次部署才需要这一步，主要是创建数据库和表结构）
+3.根据需求修改BeforeStartup中的SQL文件，然后以名称顺序执行
+3.配置启动Redis
+4.配置各个服务器和辅助工具的配置文件
+5.用ServerTool.exe导入Redis/Script中的Redis脚本
+6.启动中心服->启动逻辑服->启动登录服->启动WebUser服
+7.启动ProbeTool.exe
+8.如果要使用Web管理后台，还需要启动WebGM服，打包好WebGM前端

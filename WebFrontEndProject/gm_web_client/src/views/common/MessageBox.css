@@ -1,0 +1,55 @@
+@media screen and (min-width: 1920px) and (max-width: 32767px) { /* PC biggest */ /* w>=1920 && w<=32767 */
+	.lhs-class-message-box {
+		width: 420px;
+	}
+}
+@media screen and (min-width: 1200px) and (max-width: 1919px) { /* iPad Pro (landscape w1366*h1024) or PC */
+	.lhs-class-message-box {
+		width: 420px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) { /* iPad Pro (Portrait w1024*h1366) or PC */
+	.lhs-class-message-box {
+		width: 420px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) { /* iPad (Portrait w768*h1024) or PC */
+	.lhs-class-message-box {
+		width: 420px;
+	}
+}
+@media screen and (min-width: 414px) and (max-width: 767px) { /* iPhone 6/7/8 Plus (Portrait w414*h736) */
+	.lhs-class-message-box {
+		width: 394px;
+	}
+}
+@media screen and (min-width: 375px) and (max-width: 413px) { /* iPhone 6/7/8/X (Portrait w375*h667(X-h812)) */
+	.lhs-class-message-box {
+		width: 355px;
+	}
+}
+@media screen and (min-width: 360px) and (max-width: 374px) { /* Galaxy Note 3 (Portrait w360*h640) */
+	.lhs-class-message-box {
+		width: 340px;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 359px) { /* iPhone 5/se (Portrait w320*h568) */
+	.lhs-class-message-box {
+		width: 94%;
+	}
+}
+@media screen and (min-width: 280px) and (max-width: 319px) { /* Galaxy Fold (Portrait w280*h653) */
+	.lhs-class-message-box {
+		width: 94%;
+	}
+}
+@media screen and (min-width: 240px) and (max-width: 279px) { /* JioPhone2 (Portrait w240*h320) */
+	.lhs-class-message-box {
+		width: 94%;
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 239px) { /* smallest */
+	.lhs-class-message-box {
+		width: 94%;
+	}
+}

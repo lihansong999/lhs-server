@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+// <包名>
+// 本例将"protocol"文件夹作为协议根目录，
+// 所有协议都在"protocol"文件夹或"protocol"的子文件夹中，
+// 所有包名都是从"protocol"根目录开始（包括"protocol"），
+// 类似 "protocol" "protocol.xxx" "protocol.xxx.xxx"，
+// 导出多种开发语言代码时，包名和目录结构同名会有更好的兼容性，
+// 本例中强制要求包名与目录结构同名。
+package protocol;
+
+// <GO专用选项>
+// 格式为 option go_package = "导出路径;包名"，
+// 包名和导出路径的最后一个文件夹名称必须相同，
+// 为了开发方便和兼容性，本例中强制要求使用下面的格式，
+// option go_package = "当前'.proto'文件从'protocol'根目录开始（包括'protocol'）的文件夹路径;与末尾文件夹同名的包名"。
+option go_package = "protocol;protocol";
+
+message Error {
+  required int32 code = 1;
+  required string info = 2;
+}

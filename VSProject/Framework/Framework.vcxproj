@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8FE461F-0EE5-4ED6-B073-C257FDAD2F1C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FRAMEWORK_EXPORTS;USE_MEMORY_LEAK_DETECTOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\openssl\include\Win32;ThirdParty\pthreads\include;ThirdParty\libwebsockets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\bin\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MySQL_5_7_30\Win32\lib" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\hiredis\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\zlib\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libcurl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\openssl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libwebsockets\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\pthreads\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libssh2\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;FRAMEWORK_EXPORTS;USE_MEMORY_LEAK_DETECTOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\openssl\include\Win64;ThirdParty\pthreads\include;ThirdParty\libwebsockets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\bin\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MySQL_5_7_30\Win64\lib" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\hiredis\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\zlib\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libcurl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\openssl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libwebsockets\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\pthreads\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libssh2\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FRAMEWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\openssl\include\Win32;ThirdParty\pthreads\include;ThirdParty\libwebsockets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\bin\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MySQL_5_7_30\Win32\lib" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\hiredis\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\zlib\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libcurl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\openssl\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libwebsockets\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\pthreads\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libssh2\lib\Win32" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;FRAMEWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ThirdParty\openssl\include\Win64;ThirdParty\pthreads\include;ThirdParty\libwebsockets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\bin\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MemoryLeakDetector\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\MySQL_5_7_30\Win64\lib" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\hiredis\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\zlib\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libcurl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\openssl\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libwebsockets\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\pthreads\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D
+xcopy "$(ProjectDir)ThirdParty\libssh2\lib\Win64" "$(SolutionDir)$(Platform)\$(Configuration)\" /e /Y /D</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\FWBase64.cpp" />
+    <ClCompile Include="Common\FWCharset.cpp" />
+    <ClCompile Include="Common\FWData.cpp" />
+    <ClCompile Include="Common\FWFileIO.cpp" />
+    <ClCompile Include="Common\FWLock.cpp" />
+    <ClCompile Include="Common\FWOutPut.cpp" />
+    <ClCompile Include="Common\FWPTW32Lock.cpp" />
+    <ClCompile Include="Common\FWSchedule.cpp" />
+    <ClCompile Include="Common\FWString.cpp" />
+    <ClCompile Include="Common\FWTools.cpp" />
+    <ClCompile Include="Database\FWMySQLHelper.cpp" />
+    <ClCompile Include="Database\FWRedisHelper.cpp" />
+    <ClCompile Include="Database\FWSQLiteHelper.cpp" />
+    <ClCompile Include="Exception\FWException.cpp" />
+    <ClCompile Include="FWLocal.cpp" />
+    <ClCompile Include="FWTypeDefine.cpp" />
+    <ClCompile Include="LogicHandler\FWLogicDataBase.cpp" />
+    <ClCompile Include="LogicHandler\FWLogicHandlerBase.cpp" />
+    <ClCompile Include="Net\BSDSocket\BSDTcpSocket.cpp" />
+    <ClCompile Include="Net\FWNetTypeDef.cpp" />
+    <ClCompile Include="Net\HttpRequest\FWHttpRequest.cpp" />
+    <ClCompile Include="Net\Out\FWOutTypeDef.cpp" />
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutManageBase.cpp" />
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutSocket.cpp" />
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutTypeDef.cpp" />
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutManageBase.cpp" />
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutSocket.cpp" />
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutTypeDef.cpp" />
+    <ClCompile Include="Net\Svc\FWSvcTypeDef.cpp" />
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpListenSocket.cpp" />
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcManageBase.cpp" />
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcSocket.cpp" />
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcTypeDef.cpp" />
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcManageBase.cpp" />
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcSocket.cpp" />
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcTypeDef.cpp" />
+    <ClCompile Include="ThirdParty\md5\md5.c" />
+    <ClCompile Include="ThirdParty\sqlite-amalgamation-3240000\shell.c" />
+    <ClCompile Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3.c" />
+    <ClCompile Include="ThirdParty\tinyxml2-7.1.0\tinyxml2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\FWBase64.h" />
+    <ClInclude Include="Common\FWCharset.h" />
+    <ClInclude Include="Common\FWData.h" />
+    <ClInclude Include="Common\FWFileIO.h" />
+    <ClInclude Include="Common\FWLinkedMap.h" />
+    <ClInclude Include="Common\FWLinkedSet.h" />
+    <ClInclude Include="Common\FWLock.h" />
+    <ClInclude Include="Common\FWOutPut.h" />
+    <ClInclude Include="Common\FWPTW32Lock.h" />
+    <ClInclude Include="Common\FWSchedule.h" />
+    <ClInclude Include="Common\FWString.h" />
+    <ClInclude Include="Common\FWTools.h" />
+    <ClInclude Include="Database\FWMySQLHelper.h" />
+    <ClInclude Include="Database\FWRedisHelper.h" />
+    <ClInclude Include="Database\FWSQLiteHelper.h" />
+    <ClInclude Include="Exception\FWException.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="FWLocal.h" />
+    <ClInclude Include="FWTypeDefine.h" />
+    <ClInclude Include="LogicHandler\FWLogicDataBase.h" />
+    <ClInclude Include="LogicHandler\FWLogicHandlerBase.h" />
+    <ClInclude Include="Net\BSDSocket\BSDTcpSocket.h" />
+    <ClInclude Include="Net\FWNetTypeDef.h" />
+    <ClInclude Include="Net\HttpRequest\FWHttpRequest.h" />
+    <ClInclude Include="Net\Out\FWOutTypeDef.h" />
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutManageBase.h" />
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutSocket.h" />
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutTypeDef.h" />
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutManageBase.h" />
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutSocket.h" />
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutTypeDef.h" />
+    <ClInclude Include="Net\Svc\FWSvcTypeDef.h" />
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpListenSocket.h" />
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcManageBase.h" />
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcSocket.h" />
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcTypeDef.h" />
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcManageBase.h" />
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcSocket.h" />
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcTypeDef.h" />
+    <ClInclude Include="ThirdParty\md5\md5.h" />
+    <ClInclude Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3.h" />
+    <ClInclude Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3ext.h" />
+    <ClInclude Include="ThirdParty\tinyxml2-7.1.0\tinyxml2.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

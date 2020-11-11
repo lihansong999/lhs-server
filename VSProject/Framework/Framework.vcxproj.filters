@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\FWLock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicHandler\FWLogicHandlerBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicHandler\FWLogicDataBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWOutPut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWTools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\FWException.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\FWMySQLHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\FWSQLiteHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\sqlite-amalgamation-3240000\shell.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\FWRedisHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWFileIO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\tinyxml2-7.1.0\tinyxml2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\md5\md5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWBase64.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWSchedule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FWLocal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FWTypeDefine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWCharset.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FWPTW32Lock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\FWOutTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\FWNetTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpListenSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcManageBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\TcpSvc\FWTcpSvcTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\FWSvcTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcManageBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Svc\WebSocketSvc\FWWsSvcTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\BSDSocket\BSDTcpSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\HttpRequest\FWHttpRequest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutManageBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\TcpOut\FWTcpOutTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutManageBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Out\WebSocketOut\FWWsOutTypeDef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\FWLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicHandler\FWLogicHandlerBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicHandler\FWLogicDataBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWOutPut.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWTools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\FWException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\FWMySQLHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\FWSQLiteHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\sqlite-amalgamation-3240000\sqlite3ext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\FWRedisHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWFileIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\tinyxml2-7.1.0\tinyxml2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\md5\md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWBase64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWSchedule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FWTypeDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FWLocal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWLinkedMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWLinkedSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWCharset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FWPTW32Lock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\FWOutTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\FWNetTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpListenSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcManageBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\TcpSvc\FWTcpSvcTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\FWSvcTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcManageBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Svc\WebSocketSvc\FWWsSvcTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\BSDSocket\BSDTcpSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\HttpRequest\FWHttpRequest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutManageBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\TcpOut\FWTcpOutTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutManageBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Out\WebSocketOut\FWWsOutTypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

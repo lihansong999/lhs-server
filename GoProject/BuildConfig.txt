@@ -1,0 +1,8 @@
+1. 安装 GO 1.14.7
+2. 环境变量GOPATH配置为GoProject文件夹全路径
+3. 打开命令行cd到%GoPATH%/src/WebServer/UserServer（如果需要编译GM后台就cd到GMServer）目录中
+4. 执行go build
+
+暂不支持go.mod，如果需要支持go.mod请自行配置依赖，GO环境变量也需要进行以下修改：
+1. GO111MODULE= 改为 GO111MODULE=on
+2. GOPROXY=https://proxy.golang.org,direct 改为 GOPROXY=https://goproxy.cn,direct

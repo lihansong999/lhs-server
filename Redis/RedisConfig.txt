@@ -1,0 +1,23 @@
+Redis版本3.2.100
+
+port 6379							设置端口为 6379(Redis默认)
+requirepass 654321					设置密码为 654321
+save ""								关闭RDB
+maxmemory 3221225472				设置最大内存为 3GB
+maxmemory-policy volatile-lru		设置淘汰策略为 从设置了过期时间的KEY中删除最不常用的KEY
+maxmemory-samples 5					设置淘汰策略选取的样本数为 5
+
+appendonly no						关闭AOF(如果需要用Redis做持久化储存就改为yes)
+appendfsync everysec				设置AOF磁盘文件写入策略为 每秒一次
+no-appendfsync-on-rewrite no		设置AOF的‘追加写’与‘优化重写’同时占用IO时 ‘追加写’阻塞等待，而不是过会儿再写
+auto-aof-rewrite-percentage 100		设置AOF‘优化重写’触发的增长比例为 100
+auto-aof-rewrite-min-size 64mb		设置AOF‘优化重写’首次触发的AOF文件大小为 64mb
+aof-load-truncated yes				设置使用AOF文件恢复数据时 忽略最后一条错误的指令
+
+lua-time-limit 10000				设置lua脚本执行超时时间为10秒
+
+
+注意：
+	因本服务器Redis使用的lua脚本中有多Key同时访问的代码以及脚本内部定义常量Key的代码，
+	所以不可将Redis配置为cluster，
+	否则必须根据实际情况把Key的命名用‘{}’分到同一个slot并且停止使用脚本内部定义的常量Key。

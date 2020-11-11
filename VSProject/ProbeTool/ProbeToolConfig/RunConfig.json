@@ -1,0 +1,17 @@
+{
+	"ProbeLobbyServer": true,
+	"ProbeLogicalServer": true,
+	"MySQL": {
+		"Host": "127.0.0.1",
+		"Port": 3306,
+		"Username": "root",
+		"Password": "654321",
+		"Database": "lhs_db"
+	},
+	"Redis": {
+		"Host": "127.0.0.1",
+		"Port": 6379,
+		"Password": "654321",
+		"Select": 0
+	}
+}
